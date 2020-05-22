@@ -1,7 +1,7 @@
 ridge_map Flask Wrapper
 =======================
 
-A simple flask wrapper of the excellent ridge plot library from https://github.com/ColCarroll/ridge_map
+A simple flask wrapper of the excellent ridge plot library from [ColCarroll](https://github.com/ColCarroll/ridge_map)
 
 Usage
 -----
