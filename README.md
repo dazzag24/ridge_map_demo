@@ -31,7 +31,7 @@ Examples
 
 Notes
 -----
-To obtain the coordinates to use in the HTTP request to the service use this [bounding box tool](https://boundingbox.klokantech.com/)
+To obtain the coordinates to use in the HTTP request to the service use this [bounding box tool](https://boundingbox.klokantech.com/) and select CSV output (bottom left).
 
 
 
