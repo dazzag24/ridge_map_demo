@@ -6,7 +6,6 @@ app = Flask(__name__)
 def hello():
   return "Hello Ridgemap World!!!"
 
-#@app.route("/ridge_map/<inputcoords>", methods=['get'])
 @app.route("/ridge_map", methods=['get'])
 def ridge_map():
     from io import BytesIO
