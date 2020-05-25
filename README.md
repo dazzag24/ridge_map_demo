@@ -1,3 +1,5 @@
+![ridge_map_demo](https://github.com/dazzag24/ridge_map_demo/workflows/Python%20application/badge.svg)
+
 ridge_map Flask Wrapper
 =======================
 
