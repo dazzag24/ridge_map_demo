@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.realpath(os.path.dirname(__file__)+"/.."))
+sys.path.append(os.path.realpath(os.path.dirname(__file__)+"/..")) # noqa: E402
 from main import app
 
 
