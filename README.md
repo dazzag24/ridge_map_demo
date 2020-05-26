@@ -1,4 +1,4 @@
-![ridge_map_demo](https://github.com/dazzag24/ridge_map_demo/workflows/Python%20application/badge.svg)
+[![Build Status - GitHub](https://github.com/dazzag24/ridge_map_demo/workflows/pytesting/badge.svg)](https://github.com/dazzag24/ridge_map_demo/actions?query=workflow%3A%22Python+application%22)
 
 ridge_map Flask Wrapper
 =======================
