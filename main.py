@@ -26,7 +26,7 @@ def ridge_map():
     rm = RidgeMap((coords[0], coords[1], coords[2], coords[3]))
     values = rm.get_elevation_data(num_lines=80)
     rm.plot_map(values=rm.preprocess(values=values, water_ntile=12, vertical_ratio=60),
-                label=label, 
+                label=label,
                 label_x=0.75,
                 label_size=80,
                 linewidth=2,
