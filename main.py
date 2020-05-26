@@ -9,7 +9,7 @@ def hello():
 
 
 @app.route("/ridge_map", methods=['get'])
-def ridge_map(): 
+def ridge_map():
     from io import BytesIO
     import matplotlib.pyplot as plt
     from ridge_map import RidgeMap
@@ -20,7 +20,7 @@ def ridge_map():
     print("Label: {}".format(label))
 
     coords = []
-    for c in list(map(lambda s:s.strip(), inputcoords.split(','))):
+    for c in list(map(lambda s: s.strip(), inputcoords.split(','))):
         coords.append(float(c))
 
     rm = RidgeMap((coords[0], coords[1], coords[2], coords[3]))
@@ -36,9 +36,8 @@ def ridge_map():
     plt.savefig(png_output)
     response = make_response(png_output.getvalue())
     response.headers['Content-Type'] = 'image/png'
-  
     return response
 
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
