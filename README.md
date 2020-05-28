@@ -16,13 +16,13 @@ docker build -t <username>/ridge_map:1.0 .
 
 To run the image
 ```
-docker run -p 5000:5000 <username>/ridge_map:1.0 
+docker run -p 8080:8080 <username>/ridge_map:1.0 
 ```
 
 Then you can access the service:
 
 ```
-http://127.0.0.1:5000/ridge_map?inputcoords=-3.529,54.1743,-2.5128,54.6998&label=Lakes
+http://127.0.0.1:8080/ridge_map?inputcoords=-3.529,54.1743,-2.5128,54.6998&label=Lakes
 ```
 
 Examples
