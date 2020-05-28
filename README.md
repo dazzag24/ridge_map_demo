@@ -3,7 +3,7 @@
 ridge_map Flask Wrapper
 =======================
 
-A simple flask wrapper of the excellent ridge plot library from [ColCarroll](https://github.com/ColCarroll/ridge_map)
+A simple flask wrapper of the excellent ridge plot library from [ColCarroll](https://github.com/ColCarroll/ridge_map). Live demo hosted on fly.io https://ridge-map-demo.fly.dev/ridge_map?inputcoords=-3.529,54.1743,-2.5128,54.6998&label=Lakes
 
 Usage
 -----
