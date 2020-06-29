@@ -1,21 +1,19 @@
-from flask import Flask, request, make_response
+from typing import Optional
+from fastapi import FastAPI
+from starlette.responses import StreamingResponse
 
-app = Flask(__name__)
+app = FastAPI()
 
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
 
-@app.route("/")
-def hello():
-    return "Hello Ridgemap World!!!"
-
-
-@app.route("/ridge_map", methods=['get'])
-def ridge_map():
+@app.get("/ridge_map")
+def ridge_map(inputcoords: Optional[str], label: Optional[str] = None):
     from io import BytesIO
     import matplotlib.pyplot as plt
     from ridge_map import RidgeMap
 
-    label = request.args.get('label', None)
-    inputcoords = request.args.get('inputcoords', None)
     print("Coords: {}".format(inputcoords))
     print("Label: {}".format(label))
 
@@ -34,10 +32,7 @@ def ridge_map():
 
     png_output = BytesIO()
     plt.savefig(png_output)
-    response = make_response(png_output.getvalue())
-    response.headers['Content-Type'] = 'image/png'
-    return response
+    png_output.seek(0)
 
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    return StreamingResponse(png_output, media_type="image/png",
+       headers={'Content-Disposition': 'inline; filename=ridgemap.png'})   
